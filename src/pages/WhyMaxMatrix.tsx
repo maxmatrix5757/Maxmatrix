@@ -7,14 +7,14 @@ const WhyMaxMatrix: React.FC = () => {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="section-padding bg-bg-secondary text-white border-b border-white/5">
+      <section className="section-padding bg-bg-secondary border-b border-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <h1 className="mb-8">Why People <span className="gradient-text italic">Choose Us</span></h1>
+            <h1 className="mb-8">Why People <span className="accent-text italic">Choose Us</span></h1>
             <p className="text-text-muted leading-relaxed">
               We provide clear, honest advice and practical solutions focused on long-term value and client success.
             </p>
@@ -41,7 +41,7 @@ const WhyMaxMatrix: React.FC = () => {
                   whileHover={{ y: -10 }}
                   className="card"
                 >
-                  <div className="w-14 h-14 bg-bg-card border border-white/10 rounded-xl flex items-center justify-center text-brand-purple mb-6">
+                  <div className="w-14 h-14 bg-bg-card border border-text-primary/10 rounded-xl flex items-center justify-center text-brand-purple mb-6">
                     <IconComponent size={28} />
                   </div>
                   <h3 className="mb-4 text-text-primary">{feature.title}</h3>
@@ -59,13 +59,13 @@ const WhyMaxMatrix: React.FC = () => {
       <section className="section-padding bg-bg-secondary border-y border-white/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="mb-8">The <span className="gradient-text">MaxMatrix Mindset</span></h2>
+            <h2 className="mb-8">The <span className="accent-text">MaxMatrix Mindset</span></h2>
             <p className="text-text-muted mb-8 leading-relaxed">
               We believe that true success comes from a client-first approach—prioritizing long-term stability over short-term gains.
             </p>
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-bg-card border border-white/10 rounded-xl flex items-center justify-center text-brand-teal shrink-0">
+                <div className="w-12 h-12 bg-bg-card border border-text-primary/10 rounded-xl flex items-center justify-center text-brand-teal shrink-0">
                   <ShieldCheck size={24} />
                 </div>
                 <div>
@@ -74,7 +74,7 @@ const WhyMaxMatrix: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-bg-card border border-white/10 rounded-xl flex items-center justify-center text-brand-purple shrink-0">
+                <div className="w-12 h-12 bg-bg-card border border-text-primary/10 rounded-xl flex items-center justify-center text-brand-purple shrink-0">
                   <Award size={24} />
                 </div>
                 <div>
@@ -83,7 +83,7 @@ const WhyMaxMatrix: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-bg-card border border-white/10 rounded-xl flex items-center justify-center text-brand-purple shrink-0">
+                <div className="w-12 h-12 bg-bg-card border border-text-primary/10 rounded-xl flex items-center justify-center text-brand-purple shrink-0">
                   <Target size={24} />
                 </div>
                 <div>
@@ -93,13 +93,13 @@ const WhyMaxMatrix: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-bg-card border border-white/10 p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+          <div className="bg-bg-card border border-text-primary/10 p-8 sm:p-12 rounded-3xl relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="mb-6 text-white">Our Commitment</h3>
+              <h3 className="mb-6 text-text-primary">Our Commitment</h3>
               <p className="text-text-muted leading-relaxed mb-8 italic">
                 "We don't just consult; we partner. Whether it's ERP guidance for your business or financial advice for your personal goals, we're here to help you make informed decisions."
               </p>
-              <div className="h-1 w-20 bg-linear-to-r from-brand-purple to-brand-teal rounded-full" />
+              <div className="h-1 w-20 bg-brand-purple rounded-full" />
             </div>
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-purple/5 rounded-full blur-3xl" />
           </div>

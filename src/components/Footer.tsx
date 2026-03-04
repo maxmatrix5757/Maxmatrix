@@ -5,11 +5,11 @@ import { NAV_ITEMS } from '../constants';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-bg-secondary text-white pt-20 pb-10 border-t border-white/5">
+    <footer className="bg-bg-secondary pt-20 pb-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="space-y-6">
           <Link to="/">
-            <span className="font-serif font-bold text-2xl tracking-tight text-white">
+            <span className="font-serif font-bold text-2xl tracking-tight text-text-primary">
               MAXMATRIX
             </span>
           </Link>
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h4 className="font-serif text-lg font-semibold mb-6">Quick Links</h4>
+          <h4 className="font-serif text-lg font-semibold mb-6 text-text-primary">Quick Links</h4>
           <ul className="space-y-4 text-sm text-text-muted">
             {NAV_ITEMS.map((item) => (
               <li key={item.path}>
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h4 className="font-serif text-lg font-semibold mb-6">Services</h4>
+          <h4 className="font-serif text-lg font-semibold mb-6 text-text-primary">Services</h4>
           <ul className="space-y-4 text-sm text-text-muted">
             <li><Link to="/erp-solutions" className="hover:text-brand-purple transition-colors">ERP Implementation</Link></li>
             <li><Link to="/erp-solutions" className="hover:text-brand-purple transition-colors">Process Mapping</Link></li>
@@ -48,11 +48,11 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h4 className="font-serif text-lg font-semibold mb-6">Contact Info</h4>
+          <h4 className="font-serif text-lg font-semibold mb-6 text-text-primary">Contact Info</h4>
           <ul className="space-y-4 text-sm text-text-muted">
             <li className="flex items-center space-x-3">
               <Mail size={18} className="text-brand-teal shrink-0" />
-              <a href="mailto:max0matrixx@gmail.com" className="hover:text-brand-purple transition-colors">max0matrixx@gmail.com</a>
+              <a href="mailto:max0matrixx@gmail.com?subject=Contact via Website" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors">max0matrixx@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -66,11 +66,11 @@ export const Footer: React.FC = () => {
           </p>
         </div>
         
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 space-y-4 md:space-y-0">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-text-muted/40 space-y-4 md:space-y-0">
           <p>© {new Date().getFullYear()} MaxMatrix. All rights reserved.</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-text-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-text-primary transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

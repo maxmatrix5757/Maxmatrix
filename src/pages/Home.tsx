@@ -22,7 +22,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="mb-8">
-              Smart <span className="gradient-text">ERP Solutions</span> & Practical <span className="gradient-text">Financial Advice</span>
+              Smart <span className="accent-text">ERP Solutions</span> & Practical <span className="accent-text">Financial Advice</span>
             </h1>
             <p className="text-text-muted mb-12 leading-relaxed max-w-2xl">
               MaxMatrix helps businesses run efficiently through ERP systems and helps individuals make smarter decisions about investing, insurance, and personal money management.
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
       <section className="section-padding bg-bg-secondary border-y border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-20">
-            <h2 className="mb-6">What We <span className="gradient-text">Do</span></h2>
+            <h2 className="mb-6">What We <span className="accent-text">Do</span></h2>
             <p className="text-text-muted max-w-2xl mx-auto">
               Integrated solutions for business efficiency and personal financial growth.
             </p>
@@ -55,13 +55,13 @@ const Home: React.FC = () => {
             {/* ERP Solutions Card */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="card group border-white/10"
+              className="card group border-text-primary/10"
             >
-              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-500 border border-white/10">
+              <div className="w-16 h-16 bg-text-primary/5 rounded-2xl flex items-center justify-center mb-8 text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-500 border border-text-primary/10">
                 <Zap size={32} />
               </div>
               <h3 className="text-3xl font-serif font-bold mb-6">ERP Solutions</h3>
-              <p className="text-text-muted text-lg leading-relaxed mb-8">
+              <p className="text-text-muted text-base sm:text-lg leading-relaxed mb-8">
                 We design, implement, and support ERP systems that help businesses manage operations, reporting, and internal processes efficiently.
               </p>
               <Link to="/erp-solutions" className="inline-flex items-center text-brand-purple font-bold hover:underline">
@@ -72,13 +72,13 @@ const Home: React.FC = () => {
             {/* Financial Advisory Card */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="card group border-white/10"
+              className="card group border-text-primary/10"
             >
-              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 border border-white/10">
+              <div className="w-16 h-16 bg-text-primary/5 rounded-2xl flex items-center justify-center mb-8 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 border border-text-primary/10">
                 <BarChart3 size={32} />
               </div>
               <h3 className="text-3xl font-serif font-bold mb-6">Financial Advisory</h3>
-              <p className="text-text-muted text-lg leading-relaxed mb-8">
+              <p className="text-text-muted text-base sm:text-lg leading-relaxed mb-8">
                 We provide independent advice on investments, insurance, and personal financial planning, focused on long-term stability and informed decision-making.
               </p>
               <Link to="/financial-advisory" className="inline-flex items-center text-brand-teal font-bold hover:underline">
@@ -94,22 +94,22 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <h2 className="mb-8">Built on <span className="gradient-text">Trust</span> & <span className="gradient-text">Independence</span></h2>
+              <h2 className="mb-8">Built on <span className="accent-text">Trust</span> & <span className="accent-text">Independence</span></h2>
               <p className="text-text-muted mb-10 leading-relaxed">
                 At MaxMatrix, we operate with a client-first mindset. Our financial advice is independent and unbiased—we do not sell products or receive commissions. Our ERP solutions are practical, avoiding overengineering to focus on long-term value.
               </p>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <CheckCircle2 className="text-brand-teal" size={24} />
-                  <span className="text-lg sm:text-xl font-serif">Independent, Unbiased Advice</span>
+                  <span className="text-base sm:text-xl font-serif">Independent, Unbiased Advice</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <CheckCircle2 className="text-brand-purple" size={24} />
-                  <span className="text-lg sm:text-xl font-serif">No Product Commissions</span>
+                  <span className="text-base sm:text-xl font-serif">No Product Commissions</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <CheckCircle2 className="text-brand-purple" size={24} />
-                  <span className="text-lg sm:text-xl font-serif">Practical, Scalable ERP Systems</span>
+                  <span className="text-base sm:text-xl font-serif">Practical, Scalable ERP Systems</span>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
                 <p className="text-text-muted leading-relaxed mb-8 italic">
                   "We believe in simplicity, reliability, and long-term usability. Whether it's your business operations or your personal wealth, we treat your goals with the same care as our own."
                 </p>
-                <div className="h-1 w-20 bg-linear-to-r from-brand-purple to-brand-teal rounded-full" />
+                <div className="h-1 w-20 bg-brand-purple rounded-full" />
               </div>
               {/* Decorative background circle */}
               <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-teal/5 rounded-full blur-3xl" />
@@ -134,9 +134,9 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-linear-to-br from-brand-purple/10 via-brand-purple/20 to-brand-teal/10 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-24 text-center border border-white/10 backdrop-blur-sm">
-            <h2 className="mb-8">Ready to <span className="gradient-text">Transform</span> Your Future?</h2>
-            <p className="text-text-muted mb-12 max-w-2xl mx-auto leading-relaxed text-lg sm:text-xl">
+          <div className="bg-bg-secondary rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-24 text-center border border-white/10 backdrop-blur-sm">
+            <h2 className="mb-8">Ready to <span className="accent-text">Transform</span> Your Future?</h2>
+            <p className="text-text-muted mb-12 max-w-2xl mx-auto leading-relaxed text-base sm:text-xl">
               Schedule a consultation today and discover how our integrated approach can benefit your business and personal life.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">

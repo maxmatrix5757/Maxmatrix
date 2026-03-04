@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-3 shadow-sm' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center group">
-          <span className="font-serif font-bold text-2xl tracking-tight text-white">
+          <span className="font-serif font-bold text-2xl tracking-tight transition-colors text-text-primary">
             MAXMATRIX
           </span>
         </Link>
@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
               key={item.path}
               to={item.path}
               className={`text-sm font-medium transition-colors hover:text-brand-purple ${
-                location.pathname === item.path ? 'text-brand-purple' : isLight ? 'text-black/80' : 'text-white/80'
+                location.pathname === item.path ? 'text-brand-purple' : 'text-text-primary/80'
               }`}
             >
               {item.label}
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
           ))}
           <button 
             onClick={toggleTheme}
-            className={`p-2 rounded-full transition-colors ${isLight ? 'bg-black/5 text-black' : 'bg-white/5 text-white'}`}
+            className="p-2 rounded-full transition-colors bg-text-primary/5 text-text-primary"
           >
             {isLight ? <Moon size={20} /> : <Sun size={20} />}
           </button>
@@ -60,11 +60,11 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center space-x-4 md:hidden">
           <button 
             onClick={toggleTheme}
-            className={`p-2 rounded-full transition-colors ${isLight ? 'bg-black/5 text-black' : 'bg-white/5 text-white'}`}
+            className="p-2 rounded-full transition-colors bg-text-primary/5 text-text-primary"
           >
             {isLight ? <Moon size={20} /> : <Sun size={20} />}
           </button>
-          <button className={isLight ? 'text-black' : 'text-white'} onClick={() => setIsOpen(!isOpen)}>
+          <button className="text-text-primary" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`text-lg font-medium flex justify-between items-center ${
-                    location.pathname === item.path ? 'text-brand-purple' : isLight ? 'text-black' : 'text-white'
+                    location.pathname === item.path ? 'text-brand-purple' : 'text-text-primary'
                   }`}
                 >
                   {item.label}
