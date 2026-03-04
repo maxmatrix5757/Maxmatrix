@@ -5,39 +5,109 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", serif;
 
-  --color-brand-navy: #0A192F;
+  /* Brand Colors */
+  --color-bg-main: #0B0B0F;
+  --color-bg-secondary: #0F1117;
+  --color-bg-card: #141824;
+  
+  --color-brand-pink: #FF4D6D;
+  --color-brand-purple: #C77DFF;
+  --color-brand-teal: #5CE1E6;
   --color-brand-gold: #C5A059;
-  --color-brand-gold-light: #D4AF37;
-  --color-brand-gray: #F8F9FA;
-  --color-brand-slate: #112240;
+
+  --color-text-primary: #F3F4F6;
+  --color-text-muted: #9CA3AF;
+}
+
+.light {
+  --color-bg-main: #F9FAFB;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-card: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-muted: #4B5563;
+}
+
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light text {
+  color: #1A1A1A;
+}
+
+.light .card {
+  @apply border-black/5 shadow-sm;
+}
+
+.light .glass-nav {
+  @apply bg-white/90 border-black/5;
 }
 
 @layer base {
   body {
-    @apply bg-white text-brand-navy font-sans antialiased;
+    @apply bg-bg-main text-text-primary font-sans antialiased overflow-x-hidden;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-semibold tracking-tight;
+  h1 {
+    @apply font-serif font-bold tracking-tight text-text-primary text-3xl sm:text-5xl md:text-7xl leading-[1.15];
+  }
+
+  h2 {
+    @apply font-serif font-bold tracking-tight text-text-primary text-2xl sm:text-4xl md:text-5xl leading-tight;
+  }
+
+  h3 {
+    @apply font-serif font-bold tracking-tight text-text-primary text-xl sm:text-3xl md:text-4xl;
+  }
+
+  h4 {
+    @apply font-serif font-bold text-lg sm:text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply font-serif font-bold text-base sm:text-lg md:text-xl;
+  }
+
+  p {
+    @apply text-sm sm:text-base md:text-lg leading-relaxed;
   }
 }
 
-.glass-nav {
-  @apply bg-white/80 backdrop-blur-md border-b border-brand-navy/5 sticky top-0 z-50;
+/* Gradient Text */
+.gradient-text {
+  @apply bg-linear-to-br from-brand-purple to-brand-teal bg-clip-text text-transparent;
 }
 
+/* Glass Navigation */
+.glass-nav {
+  @apply bg-bg-main/90 backdrop-blur-md border-b border-white/5 sticky top-0 z-50;
+}
+
+/* Buttons */
 .btn-primary {
-  @apply bg-brand-navy text-white px-6 py-3 rounded-lg font-medium transition-all hover:bg-brand-slate hover:shadow-lg active:scale-95;
+  @apply bg-linear-to-br from-brand-purple to-brand-teal text-white px-6 py-3.5 sm:py-3 rounded-lg font-semibold transition-all hover:shadow-[0_0_25px_rgba(199,125,255,0.2)] hover:-translate-y-0.5 active:scale-95 text-center min-h-[44px] flex items-center justify-center text-sm sm:text-base;
+}
+
+.btn-secondary {
+  @apply border border-text-primary text-text-primary px-6 py-3.5 sm:py-3 rounded-lg font-semibold transition-all hover:bg-text-primary/5 active:scale-95 text-center min-h-[44px] flex items-center justify-center text-sm sm:text-base;
 }
 
 .btn-outline {
-  @apply border-2 border-brand-navy text-brand-navy px-6 py-3 rounded-lg font-medium transition-all hover:bg-brand-navy hover:text-white active:scale-95;
+  @apply border border-text-primary/20 text-text-primary px-6 py-3.5 sm:py-3 rounded-lg font-semibold transition-all hover:border-text-primary/40 hover:bg-text-primary/5 text-center min-h-[44px] flex items-center justify-center text-sm sm:text-base;
 }
 
-.btn-gold {
-  @apply bg-brand-gold text-white px-6 py-3 rounded-lg font-medium transition-all hover:bg-brand-gold-light hover:shadow-lg active:scale-95;
+/* Cards */
+.card {
+  @apply bg-bg-card border border-white/10 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-[0_0_25px_rgba(199,125,255,0.25)] hover:-translate-y-1;
 }
 
+/* Section Padding */
 .section-padding {
-  @apply py-20 px-6 md:px-12 lg:px-24;
+  @apply py-12 sm:py-24 px-5 sm:px-12 lg:px-24;
+}
+
+/* Forms */
+input, textarea, select {
+  @apply w-full bg-bg-secondary border border-text-primary/10 p-4 rounded-lg text-text-primary mb-4 outline-none transition-all focus:border-brand-purple focus:ring-1 focus:ring-brand-purple;
+}
+
+/* Icon Gradient */
+.icon-gradient {
+  @apply bg-linear-to-br from-brand-purple to-brand-teal bg-clip-text text-transparent;
 }

@@ -4,9 +4,9 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import Home from './pages/Home';
-import About from './pages/About';
-import ITServices from './pages/ITServices';
-import FinancialServices from './pages/FinancialServices';
+import ERPSolutions from './pages/ERPSolutions';
+import FinancialAdvisory from './pages/FinancialAdvisory';
+import WhyMaxMatrix from './pages/WhyMaxMatrix';
 import Contact from './pages/Contact';
 
 export default function App() {
@@ -18,9 +18,9 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/it-services" element={<ITServices />} />
-            <Route path="/financial-services" element={<FinancialServices />} />
+            <Route path="/erp-solutions" element={<ERPSolutions />} />
+            <Route path="/financial-advisory" element={<FinancialAdvisory />} />
+            <Route path="/why-maxmatrix" element={<WhyMaxMatrix />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
