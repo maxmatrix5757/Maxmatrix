@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { FINANCIAL_ADVISORY } from '../constants';
 import { ServiceCard } from '../components/ServiceCard';
@@ -36,14 +37,13 @@ const FinancialAdvisory: React.FC = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <a 
-              href="mailto:max0matrixx@gmail.com?subject=Financial Service Inquiry"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/contact"
+              state={{ from: 'financial' }}
               className="btn-primary px-10"
             >
               Contact for Financial Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

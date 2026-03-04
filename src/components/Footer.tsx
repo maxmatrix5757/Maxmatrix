@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
           <ul className="space-y-4 text-sm text-text-muted">
             <li className="flex items-center space-x-3">
               <Mail size={18} className="text-brand-teal shrink-0" />
-              <a href="mailto:max0matrixx@gmail.com?subject=Contact via Website" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors">max0matrixx@gmail.com</a>
+              <span className="text-text-muted">max0matrixx@gmail.com</span>
             </li>
           </ul>
         </div>

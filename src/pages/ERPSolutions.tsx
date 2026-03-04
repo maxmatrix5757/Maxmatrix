@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ERP_SERVICES } from '../constants';
 import { ServiceCard } from '../components/ServiceCard';
@@ -37,14 +38,13 @@ const ERPSolutions: React.FC = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <a 
-              href="mailto:max0matrixx@gmail.com?subject=IT Service Inquiry"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/contact"
+              state={{ from: 'erp' }}
               className="btn-primary px-10"
             >
               Contact for IT Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>
