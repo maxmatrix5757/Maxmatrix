@@ -29,37 +29,54 @@ const Blog: React.FC = () => {
       {/* Blog Posts */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post, index) => (
-              <motion.article
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="card flex flex-col h-full group"
-              >
-                <div className="flex items-center text-xs text-text-muted mb-4 space-x-2">
-                  <Calendar size={14} className="text-brand-teal" />
-                  <span>{format(new Date(post.date), 'MMMM d, yyyy')}</span>
-                </div>
-                
-                <h3 className="mb-4 group-hover:text-brand-purple transition-colors">
-                  <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                </h3>
-                
-                <p className="text-sm text-text-muted mb-6 flex-grow">
-                  {post.description}
-                </p>
-                
-                <Link 
-                  to={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-sm font-medium text-brand-purple hover:text-brand-teal transition-colors"
-                >
-                  Read More <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </motion.article>
-            ))}
-          </div>
+          {posts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts.map((post, index) => {
+                let formattedDate = 'Recent';
+                try {
+                  if (post.date) {
+                    formattedDate = format(new Date(post.date), 'MMMM d, yyyy');
+                  }
+                } catch (e) {
+                  console.error('Invalid date:', post.date);
+                }
+
+                return (
+                  <motion.article
+                    key={post.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="card flex flex-col h-full group"
+                  >
+                    <div className="flex items-center text-xs text-text-muted mb-4 space-x-2">
+                      <Calendar size={14} className="text-brand-teal" />
+                      <span>{formattedDate}</span>
+                    </div>
+                    
+                    <h3 className="mb-4 group-hover:text-brand-purple transition-colors">
+                      <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    </h3>
+                    
+                    <p className="text-sm text-text-muted mb-6 flex-grow">
+                      {post.description}
+                    </p>
+                    
+                    <Link 
+                      to={`/blog/${post.slug}`}
+                      className="inline-flex items-center text-sm font-medium text-brand-purple hover:text-brand-teal transition-colors"
+                    >
+                      Read More <ArrowRight size={16} className="ml-2" />
+                    </Link>
+                  </motion.article>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="text-center py-20">
+              <p className="text-text-muted">No articles found. Check back soon!</p>
+            </div>
+          )}
         </div>
       </section>
     </div>

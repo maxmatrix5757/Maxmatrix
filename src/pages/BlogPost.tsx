@@ -32,7 +32,15 @@ const BlogPost: React.FC = () => {
             
             <div className="flex items-center text-sm text-text-muted mb-6 space-x-2">
               <Calendar size={16} className="text-brand-teal" />
-              <span>{format(new Date(post.date), 'MMMM d, yyyy')}</span>
+              <span>
+                {(() => {
+                  try {
+                    return post.date ? format(new Date(post.date), 'MMMM d, yyyy') : 'Recent';
+                  } catch (e) {
+                    return 'Recent';
+                  }
+                })()}
+              </span>
             </div>
             
             <h1 className="mb-6">{post.title}</h1>

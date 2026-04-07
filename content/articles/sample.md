@@ -3,4 +3,4 @@ title: "Welcome to My Finance Blog"
 date: "2026-04-07"
 ---
 
-This is my first article about finance.
+This is my first article.
