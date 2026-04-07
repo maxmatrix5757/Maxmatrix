@@ -5,6 +5,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'ERP Solutions', path: '/erp-solutions' },
   { label: 'Financial Advisory', path: '/financial-advisory' },
   { label: 'Why MaxMatrix', path: '/why-maxmatrix' },
+  { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
 ];
 

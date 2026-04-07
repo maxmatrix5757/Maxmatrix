@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -113,4 +114,41 @@ input, textarea, select {
 /* Icon Style */
 .icon-accent {
   @apply text-brand-teal;
+}
+
+/* Prose Customization */
+.prose-brand {
+  --tw-prose-body: var(--color-text-primary);
+  --tw-prose-headings: var(--color-text-primary);
+  --tw-prose-links: var(--color-brand-purple);
+  --tw-prose-bold: var(--color-text-primary);
+  --tw-prose-counters: var(--color-brand-teal);
+  --tw-prose-bullets: var(--color-brand-teal);
+  --tw-prose-hr: rgba(255, 255, 255, 0.1);
+  --tw-prose-quotes: var(--color-text-muted);
+  --tw-prose-quote-borders: var(--color-brand-purple);
+  --tw-prose-captions: var(--color-text-muted);
+  --tw-prose-code: var(--color-brand-teal);
+  --tw-prose-pre-code: var(--color-text-primary);
+  --tw-prose-pre-bg: var(--color-bg-secondary);
+  --tw-prose-th-borders: rgba(255, 255, 255, 0.1);
+  --tw-prose-td-borders: rgba(255, 255, 255, 0.05);
+}
+
+.light .prose-brand {
+  --tw-prose-body: var(--color-text-primary);
+  --tw-prose-headings: var(--color-text-primary);
+  --tw-prose-links: var(--color-brand-purple);
+  --tw-prose-bold: var(--color-text-primary);
+  --tw-prose-counters: var(--color-brand-purple);
+  --tw-prose-bullets: var(--color-brand-purple);
+  --tw-prose-hr: rgba(0, 0, 0, 0.1);
+  --tw-prose-quotes: var(--color-text-muted);
+  --tw-prose-quote-borders: var(--color-brand-purple);
+  --tw-prose-captions: var(--color-text-muted);
+  --tw-prose-code: var(--color-brand-purple);
+  --tw-prose-pre-code: var(--color-text-primary);
+  --tw-prose-pre-bg: #f3f4f6;
+  --tw-prose-th-borders: rgba(0, 0, 0, 0.1);
+  --tw-prose-td-borders: rgba(0, 0, 0, 0.05);
 }

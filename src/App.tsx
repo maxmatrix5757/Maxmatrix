@@ -8,6 +8,8 @@ import ERPSolutions from './pages/ERPSolutions';
 import FinancialAdvisory from './pages/FinancialAdvisory';
 import WhyMaxMatrix from './pages/WhyMaxMatrix';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
             <Route path="/financial-advisory" element={<FinancialAdvisory />} />
             <Route path="/why-maxmatrix" element={<WhyMaxMatrix />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />
