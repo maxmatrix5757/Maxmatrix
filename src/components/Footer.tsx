@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
             ERP Solutions & Independent Financial Advisory. We help businesses run efficiently and individuals make smarter financial decisions.
           </p>
           <div className="flex space-x-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all">
+            <a href="https://www.instagram.com/maxmatrix.in?igsh=MTdpOGlnZG5vMmZqNA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all">
               <Instagram size={18} />
             </a>
           </div>

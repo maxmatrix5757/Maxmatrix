@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/maxmatrix.in?igsh=MTdpOGlnZG5vMmZqNA==" 
               target="_blank" 
               rel="noopener noreferrer"
               className="card flex flex-col items-center text-center group hover:border-brand-purple/50 transition-all"
