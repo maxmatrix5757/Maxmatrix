@@ -21,7 +21,7 @@ export const getAllPosts = (): BlogPost[] => {
       slug,
       title: data.title || 'Untitled',
       date: data.date || '',
-      description: data.description || '',
+      description: data.description || (content.length > 150 ? content.slice(0, 150) + '...' : content),
       content,
     };
   }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

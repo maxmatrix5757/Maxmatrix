@@ -1,10 +1,12 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME # Replace with your repo
+  repo: maxmatrix5757/Maxmatrix
   branch: main
+  base_url: https://ais-dev-a5mhlgv5nxcc73jqzto2hb-349983386831.asia-southeast1.run.app
+  auth_endpoint: api/auth
 
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
   - name: "articles"
@@ -14,6 +16,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
