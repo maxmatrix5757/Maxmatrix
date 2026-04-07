@@ -2,7 +2,7 @@ backend:
   name: github
   repo: maxmatrix5757/Maxmatrix
   branch: main
-  base_url: https://your-oauth.vercel.app
+  base_url: https://oauth-server-kappa.vercel.app
   auth_endpoint: api/auth
 
 media_folder: "public/images"
