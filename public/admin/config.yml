@@ -2,7 +2,7 @@ backend:
   name: github
   repo: maxmatrix5757/Maxmatrix
   branch: main
-  base_url: https://ais-dev-a5mhlgv5nxcc73jqzto2hb-349983386831.asia-southeast1.run.app
+  base_url: https://your-oauth.vercel.app
   auth_endpoint: api/auth
 
 media_folder: "public/images"
@@ -17,5 +17,4 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
