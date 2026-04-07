@@ -4,7 +4,6 @@ backend:
   branch: main
   base_url: https://oauth-server-kappa.vercel.app
   auth_endpoint: api/auth
-  proxy: true
 
 media_folder: "public/images"
 public_folder: "/images"
